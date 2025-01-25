@@ -1,36 +1,95 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Slider-App
 
-## Getting Started
+## Описание
 
-First, run the development server:
+**Slider-App** — это приложение, созданное на базе Next.js 15, TypeScript и TailwindCSS. В нём реализован карусельный слайдер с использованием библиотеки `react-multi-carousel`. Приложение адаптировано под различные устройства и поддерживает динамическое отображение слайдов.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+**React Multi Carousel** — это лёгкая и готовая к использованию в продакшене библиотека каруселей, поддерживающая отображение нескольких элементов и серверный рендеринг без дополнительных зависимостей. Размер бандла всего 2 KB.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Технологии
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+-   **Next.js**: Фреймворк для React с серверным рендерингом.
+-   **TypeScript**: Статически типизированный язык для улучшения качества кода.
+-   **TailwindCSS**: Утилитарный CSS-фреймворк для стилизации.
+-   **React Multi Carousel**: Библиотека для создания адаптивных каруселей.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Функционал
 
-## Learn More
+-   Адаптивный дизайн для любых экранов.
+-   Динамическая загрузка слайдов.
+-   Настраиваемые точки (dots) для навигации.
+-   Поддержка авто-прокрутки и SSR.
 
-To learn more about Next.js, take a look at the following resources:
+## Установка и запуск
 
--   [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
--   [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Убедитесь, что на вашем компьютере установлены **Node.js** и **npm** или **yarn**.
+2. Склонируйте репозиторий:
+    ```bash
+    git clone https://github.com/Stas-Z/Slider-app.git
+    ```
+3. Перейдите в папку проекта:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+    ```bash
+    cd Slider-app
 
-## Deploy on Vercel
+    ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. Установите зависимости:
+    ```bash
+    npm install
+    # или
+    yarn install
+    ```
+5. Запустите проект в режиме разработки:
+    ```bash
+    npm run dev
+    # или
+    yarn dev
+    ```
+6. Откройте [http://localhost:3000](http://localhost:3000) в вашем браузере.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Структура проекта
+
+-   **/components**: Компоненты приложения.
+    -   `Slider`: Основной компонент карусели.
+    -   `SliderItem`: Отображение одного слайда.
+    -   `CustomDot`: Пользовательские точки для навигации.
+-   **/const**: Константы и данные для отображения слайдов.
+-   **/settings**: Настройки для карусели, включая точки breakpoints.
+
+## Как добавить новый слайд
+
+1. Перейдите в файл `/const/slides.ts`.
+2. Добавьте новый объект в массив `slides`:
+    ```typescript
+    {
+        id: 7,
+        title: 'Название слайда',
+        description: 'Описание слайда',
+        icon: '/icons/new_icon.svg',
+    }
+    ```
+3. Убедитесь, что иконка добавлена в папку `/public/icons`.
+
+## Скрипты
+
+-   `dev`: Запуск проекта в режиме разработки.
+-   `build`: Сборка проекта для продакшена.
+-   `start`: Запуск собранного приложения.
+-   `lint`: Проверка кода на ошибки с помощью ESLint.
+
+## Зависимости
+
+### Основные:
+
+-   `next`: Фреймворк для серверного рендеринга.
+-   `react`: Библиотека для построения пользовательских интерфейсов.
+-   `react-multi-carousel`: Библиотека для создания каруселей.
+
+### Для разработки:
+
+-   `eslint`: Линтер для проверки кода.
+-   `tailwindcss`: Утилитарный CSS-фреймворк.
+-   `typescript`: Язык программирования с поддержкой типов.
+
+**Slider-App** — упрощает создание интерактивных слайдеров для любых проектов!

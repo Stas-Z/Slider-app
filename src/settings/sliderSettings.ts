@@ -7,7 +7,7 @@ export const responsive = {
 		breakpoint: { max: 2000, min: 1400 },
 		items: 4,
 	},
-	desktopMd: {
+	desktop: {
 		breakpoint: { max: 1400, min: 1024 },
 		items: 3,
 	},

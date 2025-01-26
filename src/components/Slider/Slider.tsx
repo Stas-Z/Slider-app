@@ -34,6 +34,7 @@ export const Slider = memo((props: SliderProps) => {
 				customDot={<CustomDot />}
 				dotListClass="ml-2 mb-6 relative justify-start lg:hidden"
 				minimumTouchDrag={10}
+				deviceType={'desktop'}
 			>
 				{slides.map((slide) => (
 					<SliderItem key={slide.id} slide={slide} />

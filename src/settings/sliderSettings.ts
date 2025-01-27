@@ -1,3 +1,6 @@
+import { ComponentProps } from 'react';
+import Carousel from 'react-multi-carousel';
+
 export const responsive = {
 	superLargeDesktop: {
 		breakpoint: { max: 4000, min: 2000 },
@@ -34,4 +37,20 @@ export const responsive = {
 		breakpoint: { max: 640, min: 0 },
 		items: 1,
 	},
+};
+
+type SliderSettings = Omit<ComponentProps<typeof Carousel>, 'children'>;
+
+export const settings: SliderSettings = {
+	responsive: responsive,
+	infinite: true,
+	autoPlay: true,
+	ssr: true,
+	arrows: false,
+	centerMode: false,
+	partialVisible: true,
+	showDots: true,
+	renderDotsOutside: true,
+	minimumTouchDrag: 10,
+	deviceType: 'desktop',
 };
